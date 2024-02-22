@@ -3,4 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Hello World!")
+    if request.method=="GET":
+        return HttpResponse("GET it World!")
+    elif request.method=="POST":
+        return HttpResponse("POST it World!")
